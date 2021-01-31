@@ -1,0 +1,147 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: white;
+}
+
+.zaglavlje {
+  background: url("../img/bh.jpg") no-repeat fixed center center;
+  background-size: cover;
+}
+
+.zaglavlje-pozadina{
+  background: rgba(0, 0, 0, .5);
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.zaglavlje-naslov{
+  padding: 35vh 0 0;
+}
+
+.zaglavlje-naslov h1 {
+  color: white;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.zaglavlje-naslov p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5 em;
+}
+
+.zaglavlje-navigacija {
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  padding: 15px 30px;
+}
+
+.zaglavlje-navigacija a{
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.zaglavlje-navigacija a:hover{
+  color: #aaa;
+}
+
+.zaglavlje-pozadina .scroll{
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+}
+
+.zaglavlje-pozadina .scroll a{
+  color: white;
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid white;
+}
+
+.podnaslov {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.podnozje {
+  color: red;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.lista1 li{
+  list-style-type: none;
+  background-image: url("../img/skull.png");
+  background-position: 0px 5px;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  padding-left: 20px;
+}
+
+.lista1 li:last-of-type{
+  color: green;
+  background: #eee;
+}
+
+
+ol{
+  list-style-type: decimal-leading-zero;
+}
+
+.box{
+  width: 300px;
+  height: 300px;
+  background: #123;
+  color: white;
+  padding: 50px;
+  margin: 50px;
+  border: 50px solid #eee;
+}
+
+#shadow{
+  border: 1px solid;
+  padding: 10px;
+  text-shadow: 5px 10px red;
+  cursor: wait;
+}
+
+.imeKlase {
+  column-count: 3;
+  column-gap: 30px;
+  column-rule-style: solid;
+  column-rule-width: 2px;
+  column-rule-color: blue;
+}
+
+.border-element {
+  border-width: 5px;
+  border-style: dashed;
+  border-color: blue;
+  border-radius: 15px;
+}
+
+.relative{
+  float: left;
+}
+
+.gradient{
+  float: right;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, blue, red);
+}
