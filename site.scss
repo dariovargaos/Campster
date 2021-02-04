@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul{
+    margin: 0;
+}
+
+a,
+a:hover{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 28px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-size: 20px;
+}
+h5{
+    font-size: 18px;
+}
+h6{
+    font-size: 16px;
+}
+p{
+    font-size: 14px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+$f-bold: 500;
+$f-light: 300;
+
+$c-blue: #2196F3;
+
+
+.navigation{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: white;
+
+    > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 50px;
+    }
+
+    h1{
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: $f-bold;
+        a{
+            transition: all .2s;
+            color: darken($c-blue, 15%);
+            &:hover{
+                color: darken($c-blue, 5%);
+            }
+        }
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+        li{
+            margin-left: 15px;
+            a{
+                transition: all .2s;
+                font-weight: $f-bold;
+                color: $c-blue;
+                &:hover{
+                    color: lighten($c-blue, 15%);
+                }
+            }
+        }
+
+    }
+
+}
+
+.main-header{
+
+    position: relative;
+    min-height: 100vh;
+    background: $c-blue;
+
+    &-box{
+        $box-h: 110px;
+        $border-c: $c-blue;
+        $border-w: 10px;
+
+        position: absolute;
+        color: $c-blue;
+        max-width: 550px;
+        left: 0;
+        right: 0;
+        top: 40%;
+        margin: auto;
+        background: white;
+        text-align: center;
+        padding: 20px 0;
+        height: $box-h;
+        h1{
+            font-size: 3em;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+
+        h3{
+            font-size: 2em;
+            font-weight: $f-light;
+        }
+
+        &::before,
+        &::after{
+            content: '';
+            position: absolute;
+            height: $box-h / 2;
+            width: $box-h / 2;
+        }
+
+        &::before{
+            left: 0;
+            top: 0;
+            border-left: $border-w solid $border-c;
+            border-top: $border-w solid $border-c;
+        }
+
+        &::after{
+            right: 0;
+            bottom: 0;
+            border-right: $border-w solid $border-c;
+            border-bottom: $border-w solid $border-c;
+        }
+
+    }
+
+    > a.icon{
+        transition: all .2s;
+        $s: 50px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 15px;
+        margin: auto;
+        width: $s;
+        height: $s;
+        background: rgba(white, .5);
+        border-radius: 100%;
+        text-align: center;
+        i{
+            color: $c-blue;
+            line-height: $s;
+            font-size: 22px;
+        }
+        &:hover{
+            background: white;
+        }
+    }
+}
+
+.row-w{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+
+.section{
+    padding: 50px 0;
+
+    > h2{
+        font-size: 1.6em;
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 50px;
+            margin: auto;
+            height: 5px;
+            background: #eee;
+        }
+    }
+
+    &-boxes{
+        display: flex;
+
+        article{
+            flex: 1;
+            text-align: center;
+            padding: 30px;
+
+            h3{
+                margin: 10px 0 5px;
+                font-size: 1.3em;
+            }
+
+            p{
+                font-size: 1em;
+                opacity: .8;
+            }
+
+            a{
+                font-weight: $f-bold;
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+
+        }
+
+    }
+
+}
+
+footer{
+  padding: 30px;
+  text-align:center;
+  background:#eee;
+  a{
+    color:$c-blue;
+  }
+}
